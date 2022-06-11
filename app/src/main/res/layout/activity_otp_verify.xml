@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#00B7FF"
+    android:id="@+id/frameLayoutRoot">
+
+    <LinearLayout
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="90dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/editTextOne"
+            android:layout_width="83dp"
+            android:layout_height="60pt"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/otp_item"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:imeOptions="actionNone"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="@color/red"
+            android:textCursorDrawable="@null"
+            android:textSize="15pt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextTwo"
+            android:layout_width="88dp"
+            android:layout_height="60pt"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/otp_item"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:imeOptions="actionNone"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="@color/red"
+            android:textCursorDrawable="@null"
+            android:textSize="15pt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextThree"
+            android:layout_width="83dp"
+            android:layout_height="60pt"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/otp_item"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:imeOptions="actionNone"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="@color/red"
+            android:textCursorDrawable="@null"
+            android:textSize="15pt"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editTextFour"
+            android:layout_width="83dp"
+            android:layout_height="60pt"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/otp_item"
+            android:cursorVisible="false"
+            android:enabled="false"
+            android:gravity="center"
+            android:imeOptions="actionNone"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
+            android:maxLines="1"
+            android:textColor="@color/red"
+            android:textCursorDrawable="@null"
+            android:textSize="15pt"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="Phone Number"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Please Enter OTP"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="162dp"
+        android:layout_height="147dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        app:srcCompat="@drawable/verifyotp" />
+
+
+</FrameLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/rlHeader"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width='match_parent'
+            android:layout_height="match_parent"
+            android:src="@drawable/logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader"
+        android:layout_width="220dp"
+        android:layout_height="480dp"
+        android:background="@drawable/shape_left_panel"
+        tools:ignore="MissingConstraints" >
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llLoginPanel"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:background="@drawable/shape_login_panel"
+        android:paddingTop="70dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_height="350dp"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <EditText android:hint="Email"
+            android:id="@+id/txtEmailLogin"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+        <EditText android:hint="Password"
+            android:id="@+id/txtPasswordLogin"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <TextView
+            android:id="@+id/txtForgetPassword"
+            android:layout_marginTop="15dp"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Forget password?"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:text="Login"
+        android:layout_marginBottom="5dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@id/llLoginPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_login_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp" />
+
+    <TextView android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="40dp"
+        app:layout_constraintTop_toTopOf="@id/llLoginPanel"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        />
+
+    <TextView android:id="@+id/tvSignUp"
+        android:textSize="20sp"
+        android:gravity="right"
+        android:layout_marginRight="40dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/llLoginPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up"
+        />
+
+    <LinearLayout
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+        <TextView android:text="Don't have an account?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tvSignUpSecond"
+            android:text="SIGN UP"
+            android:layout_marginLeft="15dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/holo_purple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

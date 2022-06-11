@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateCardActivity">
+
+    <LinearLayout
+        android:id="@+id/lnAddTaskBack1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#5a55ca"
+        android:gravity="center"
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvBackDashBoard1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Update Task"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvUpdateDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lnAddTaskBack1"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="TASK NAME"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/tvUpdateDetails"
+        android:id="@+id/txtTitleUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Enter Task"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+
+    <TextView
+        android:id="@+id/tvPriorityUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleUpdate"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Priority"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tvPriorityUpdate"
+        android:id="@+id/txtPriorityUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Priority"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/lnPriority_update"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPriorityUpdate"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnLow_update"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="LOW"
+            android:backgroundTint="#3498db"
+            tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/btnMedium_update"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="35dp"
+            android:text="MEDIUM"
+            android:backgroundTint="#f1c40f"
+            tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/btnHigh_update"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="HIGH"
+            android:backgroundTint="#e74c3c"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_create_status_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/lnPriority_update"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Status"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_status_update"
+        android:id="@+id/tvStatusUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Status"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/lnStatus_update"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusUpdate"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="YES"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#2ecc71"
+            tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#9b59b6"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/lnStatus_update"
+        android:id="@+id/btnDoneUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="MissingConstraints"/>
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/btnDoneUpdate"
+        android:id="@+id/btnDeleteUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="#a4b0be"
+        tools:ignore="MissingConstraints"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f0f4fd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".CreateCardActivity">
+
+    <LinearLayout
+        android:id="@+id/lnAddTaskBack"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#5a55ca"
+        android:gravity="center"
+
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvBackDashBoard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Add Task"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tvTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lnAddTaskBack"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="TASK NAME"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@id/tvTaskName"
+        android:id="@+id/create_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Enter Task"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="411dp" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/create_title"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif"
+        android:text="DATE"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/lnPickDateAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tvDate">
+
+        <TextView
+            android:id="@+id/txtPickDate"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Today"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="#BFBBBB"
+            tools:ignore="MissingConstraints" />
+        <ImageView
+            android:id="@+id/imgDateAddTask"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_calendar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lnPickDateAddTask"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif"
+        android:text="Priority"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tvPriority"
+        android:id="@+id/create_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Priority"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/lnPriority"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/create_priority"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/btnLow"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="LOW"
+            android:backgroundTint="#3498db"
+            tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/btnMedium"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="35dp"
+            android:layout_marginLeft="35dp"
+            android:text="MEDIUM"
+            android:backgroundTint="#f1c40f"
+            tools:ignore="MissingConstraints"/>
+        <Button
+            android:id="@+id/btnHigh"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="HIGH"
+            android:backgroundTint="#e74c3c"
+            tools:ignore="MissingConstraints"/>
+    </LinearLayout>
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/lnPriority"
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DONE"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        tools:ignore="MissingConstraints"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

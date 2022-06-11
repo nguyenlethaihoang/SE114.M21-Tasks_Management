@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f0f4fd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/lnProfileBack"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#5a55ca"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Profile"
+            android:textSize="25sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnAvatar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#f0f4fd"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/lnProfileBack"
+
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:gravity="center_horizontal"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_user"
+            android:layout_marginTop="20dp"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tvNameProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="NAME"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/lnAvatar"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp" />
+    <TextView
+
+        app:layout_constraintTop_toBottomOf="@+id/tvNameProfile"
+        android:id="@+id/txtNameProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Name"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/tvEmailProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:gravity="left"
+        android:text="EMAIL"
+        android:textColor="#2c3e50"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/txtNameProfile"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="87dp" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@+id/tvEmailProfile"
+        android:id="@+id/txtEmailProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:maxLines="1"
+        android:hint="Email"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#BFBBBB"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/lnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#f0f4fd"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtEmailProfile"
+
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:backgroundTint="#ff7979"
+            tools:ignore="MissingConstraints"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

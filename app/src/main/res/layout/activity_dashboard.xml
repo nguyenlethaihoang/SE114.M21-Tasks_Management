@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <LinearLayout
+        android:id="@+id/lnHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvYourTask"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:text="Task"
+            android:textColor="#21345d"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_user" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/lnHeader"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgDate"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_calendar" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:text="Date"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btAdd"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#F26950"
+            android:text="+ Add Task"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lnPickDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/lnDate"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/btnDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="Date Picker"
+            android:textAllCaps="false"
+            android:background="#8886d9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+        <ProgressBar
+
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/seekbar"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/lnPickDate">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/taskList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/activity_view" />
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
